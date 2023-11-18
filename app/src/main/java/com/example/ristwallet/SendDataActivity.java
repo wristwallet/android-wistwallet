@@ -31,7 +31,7 @@ public class SendDataActivity extends AppCompatActivity {
     }
 
     public void sendFunds(View view) {
-        Web3j web3j = Web3j.build(new HttpService(WalletActivity.INFURA));
+        Web3j web3j = Web3j.build(new HttpService(NetworkState.getNetwork().currentEndpoint));
         Credentials credentials = Credentials.create(PRIVATE_KEY);
         BigDecimal amountToSend = BigDecimal.valueOf(0.002);
 
