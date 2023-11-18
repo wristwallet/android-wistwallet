@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#242222">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick='changeToEthereum'
+            android:text="Ethereum"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="69dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick='changeToGnosis'
+            android:text="GnosisChain"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="124dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeToArbitrum"
+            android:text="Arbitrum"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="69dp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeToPolygon"
+            android:text="Polygon"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="124dp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeToMantle"
+            android:text="Mantle"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="69dp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeTozkSync"
+            android:text="zkSync"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="124dp" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeToStarknet"
+            android:text="Starknet"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="69dp" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeToScroll"
+            android:text="Scroll"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="124dp" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeToCelo"
+            android:text="Celo"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="69dp" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="changeToBase"
+            android:text="Base"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="124dp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
