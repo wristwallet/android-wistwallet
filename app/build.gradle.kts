@@ -48,4 +48,6 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    // Use this dependency to bundle the model with your app
+    implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0");
 }
