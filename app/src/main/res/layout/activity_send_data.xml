@@ -48,13 +48,14 @@
         android:id="@+id/recieveAddressEditText"
         android:layout_width="0dp"
         android:lines="1"
+        android:inputType="textWebEmailAddress"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:background="#444"
         android:paddingTop="2dp"
         android:paddingBottom="2dp"
-        android:text="0xd05...4069F9 "
+        android:text="abdomo.eth"
         android:textAlignment="center"
         android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/textView9"
+        android:id="@+id/amountText"
         android:inputType="numberDecimal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -72,7 +73,7 @@
         android:fontFamily="@font/digi"
         android:paddingTop="2dp"
         android:paddingBottom="2dp"
-        android:text="0.0"
+        android:text="0.001"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="18sp"
@@ -88,7 +89,7 @@
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/amountText"
         android:onClick="sendFunds"
         app:srcCompat="@drawable/send" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,8 +19,11 @@ public class WalletActivity extends AppCompatActivity {
 
     private static final String TAG = "WalletActivity";
 //    static public String ADDRESS = "0xcCb4DD8873b48aC533dA83371Dd9ED4fa064C12b";
-    static public String ADDRESS = "0xE831B2983c04e3f4548039805fc8818BBC1c4454";
+//    static public String ADDRESS = "0xE831B2983c04e3f4548039805fc8818BBC1c4454";
+    static public String ADDRESS = "0xcCb4DD8873b48aC533dA83371Dd9ED4fa064C12b";
     static public String INFURA = "https://eth-sepolia.g.alchemy.com/v2/taN5ntVJsi4Pk_w8ZxCBVcc_So3bZUPC";
+    static public String GNOSIS = "https://rpc.gnosis.gateway.fm/";
+    static public String INFURA_MAINNET = "https://mainnet.infura.io/v3/b30f49759769470c8acac821910d824f";
     Web3j web3;
     TextView balanceText;
     @Override
@@ -30,7 +33,7 @@ public class WalletActivity extends AppCompatActivity {
         balanceText = findViewById(R.id.balanceText);
 
 //        web3 = Web3j.build(new HttpService("https://mainnet.infura.io/v3/b30f49759769470c8acac821910d824f"));
-        web3 = Web3j.build(new HttpService(INFURA));
+        web3 = Web3j.build(new HttpService(GNOSIS));
 
     }
 
