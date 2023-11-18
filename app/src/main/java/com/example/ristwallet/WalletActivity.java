@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -17,32 +16,30 @@ import java.math.BigInteger;
 
 public class WalletActivity extends AppCompatActivity {
 
+    public static final String INFURA_MAINNET = "https://mainnet.infura.io/v3/b30f49759769470c8acac821910d824f";
     private static final String TAG = "WalletActivity";
 //    static public String ADDRESS = "0xcCb4DD8873b48aC533dA83371Dd9ED4fa064C12b";
-//    static public String ADDRESS = "0xE831B2983c04e3f4548039805fc8818BBC1c4454";
-    static public String ADDRESS = "0xcCb4DD8873b48aC533dA83371Dd9ED4fa064C12b";
-    static public String INFURA = "https://eth-sepolia.g.alchemy.com/v2/taN5ntVJsi4Pk_w8ZxCBVcc_So3bZUPC";
-    static public String GNOSIS = "https://rpc.gnosis.gateway.fm/";
-    static public String INFURA_MAINNET = "https://mainnet.infura.io/v3/b30f49759769470c8acac821910d824f";
+    public String address = "0xcCb4DD8873b48aC533dA83371Dd9ED4fa064C12b";
+    public String endpoint = NetworkState.getNetwork().currentEndpoint;
+
     Web3j web3;
     TextView balanceText;
+    TextView currency;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wallet);
         balanceText = findViewById(R.id.balanceText);
-
-//        web3 = Web3j.build(new HttpService("https://mainnet.infura.io/v3/b30f49759769470c8acac821910d824f"));
-        web3 = Web3j.build(new HttpService(GNOSIS));
-
+        currency = findViewById(R.id.currencyText);
     }
 
     @Override
     protected void onResume() {
+        web3 = Web3j.build(new HttpService(NetworkState.getNetwork().currentEndpoint));
         super.onResume();
         balanceText.setText("...");
         new Thread(() -> {
-            BigInteger balance = getBalance(ADDRESS);
+            BigInteger balance = getBalance(address);
             // Convert balance from Wei to Ether and update UI accordingly
             // Make sure to run UI updates on the main thread
 
@@ -53,6 +50,7 @@ public class WalletActivity extends AppCompatActivity {
             float finalFormatedBalance = formatedBalance;
             WalletActivity.this.runOnUiThread(() -> {
                 balanceText.setText(Float.toString(finalFormatedBalance));
+                currency.setText(NetworkState.getNetwork().currentCurrency);
             });
         }).start();
     }
@@ -81,6 +79,11 @@ public class WalletActivity extends AppCompatActivity {
 
     public void goToSendActivity(View view) {
         Intent intent = new Intent(this, SendDataActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToNetworkActivity(View view) {
+        Intent intent = new Intent(this, NetworkActivity.class);
         startActivity(intent);
     }
 }
