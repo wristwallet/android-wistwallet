@@ -32,7 +32,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+
 }
+
+
 
 dependencies {
 
@@ -50,4 +54,10 @@ dependencies {
 
     // Use this dependency to bundle the model with your app
     implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0");
+
+
+
+
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+
 }
