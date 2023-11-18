@@ -12,6 +12,8 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
+        multiDexEnabled = true
+
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -55,9 +57,9 @@ dependencies {
     // Use this dependency to bundle the model with your app
     implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0");
 
-
+    val multidex_version = "2.0.1"
+    implementation("androidx.multidex:multidex:$multidex_version")
 
 
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
-
 }

@@ -8,7 +8,7 @@
     tools:context=".RecieveActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/qr_image"
         android:layout_width="250px"
         android:layout_height="250px"
         app:layout_constraintBottom_toBottomOf="parent"
