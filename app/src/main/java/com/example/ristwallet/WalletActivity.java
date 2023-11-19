@@ -21,7 +21,7 @@ public class WalletActivity extends AppCompatActivity {
     public static final String INFURA_MAINNET = "https://mainnet.infura.io/v3/b30f49759769470c8acac821910d824f";
     private static final String TAG = "WalletActivity";
 //    static public String ADDRESS = "0xcCb4DD8873b48aC533dA83371Dd9ED4fa064C12b";
-    public String address = "0xfA9c63784CB8045d5A4D5BfD28ca0761DA387144";
+    public static String ADDRESS = "0xfA9c63784CB8045d5A4D5BfD28ca0761DA387144";
     public String endpoint = NetworkState.getNetwork().currentEndpoint;
 
     Web3j web3;
@@ -48,7 +48,7 @@ public class WalletActivity extends AppCompatActivity {
         super.onResume();
         balanceText.setText("...");
         new Thread(() -> {
-            BigInteger balance = getBalance(address);
+            BigInteger balance = getBalance(ADDRESS);
             // Convert balance from Wei to Ether and update UI accordingly
             // Make sure to run UI updates on the main thread
 
