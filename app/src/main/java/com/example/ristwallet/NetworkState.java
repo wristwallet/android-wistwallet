@@ -16,13 +16,15 @@ public class NetworkState {
             put("Ethereum", new Triple<>("https://mainnet.infura.io/v3/b30f49759769470c8acac821910d824f", "ETH", R.drawable.ethereum));
             put("Arbitrum", new Triple<>("https://arb1.arbitrum.io/rpc", "ETH", R.drawable.arbitrum));
             put("Base", new Triple<> ("https://mainnet.base.org/", "ETH", R.drawable.base));
-            put("Celo", new Triple<>("https://forno.celo.org/", "CELO", R.drawable.celo));
+//            put("Celo", new Triple<>("https://forno.celo.org/", "CELO", R.drawable.celo));
+            put("Celo", new Triple<>("https://alfajores-forno.celo-testnet.org", "CELO", R.drawable.celo));
             put("GnosisChain", new Triple<>("https://rpc.gnosis.gateway.fm/", "xDAI", R.drawable.gnosis));
             put("Mantle", new Triple<>("https://mantle-mainnet.public.blastapi.io/", "MNT", R.drawable.manal));
             put("Polygon", new Triple<>("https://polygon-rpc.com/", "MATIC", R.drawable.polygon));
             put("Scroll", new Triple<>("https://rpc.scroll.io/", "ETH", R.drawable.scroll));
             put("Starknet", new Triple<>("https://starknet-mainnet.g.alchemy.com/v2/demo", "ETH", R.drawable.starknet));
-            put("zkSync", new Triple<> ("https://mainnet.era.zksync.io/", "ETH", R.drawable.zksync));
+//            put("zkSync", new Triple<> ("https://mainnet.era.zksync.io/", "ETH", R.drawable.zksync));
+            put("zkSync", new Triple<> ("https://testnet.era.zksync.dev", "ETH", R.drawable.zksync));
         }
     };
 
