@@ -44,7 +44,7 @@ git clone https://github.com/wristwallet/android-wistwallet.git
 * Gradle - Dependency Management
 * Java/Kotlin - The primary programming language
 
-  ## 3D CAD files
+## 3D CAD files
 
-  * The 3D CAD files can be found in the repo [mechanical-design](https://github.com/wristwallet/mechanical-design). The Solidworks Files can be viewed in the Solidworks CAD software, whereas the STEP files can be uploaded online to a STEP file viewer, for example, https://imagetostl.com/view-stp-online. Do note that the colors of the model won't be shown similar to the video unless viewed with Solidworks software.
+* The 3D CAD files can be found in the repo [mechanical-design](https://github.com/wristwallet/mechanical-design). The Solidworks Files can be viewed in the Solidworks CAD software, whereas the STEP files can be uploaded online to a STEP file viewer, for example, https://imagetostl.com/view-stp-online. Do note that the colors of the model won't be shown similar to the video unless viewed with Solidworks software.
 
