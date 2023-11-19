@@ -12,7 +12,8 @@ public class NetworkState {
 
     private final Map<String, Triple<String, String, Integer>> addressDictionary = new HashMap<String, Triple<String, String, Integer>>() {
         {
-            put("Ethereum", new Triple<>("https://eth-sepolia.g.alchemy.com/v2/taN5ntVJsi4Pk_w8ZxCBVcc_So3bZUPC", "ETH", R.drawable.ethereum));
+//            put("Ethereum", new Triple<>("https://eth-sepolia.g.alchemy.com/v2/taN5ntVJsi4Pk_w8ZxCBVcc_So3bZUPC", "ETH", R.drawable.ethereum));
+            put("Ethereum", new Triple<>("https://mainnet.infura.io/v3/b30f49759769470c8acac821910d824f", "ETH", R.drawable.ethereum));
             put("Arbitrum", new Triple<>("https://arb1.arbitrum.io/rpc", "ETH", R.drawable.arbitrum));
             put("Base", new Triple<> ("https://mainnet.base.org/", "ETH", R.drawable.base));
             put("Celo", new Triple<>("https://forno.celo.org/", "CELO", R.drawable.celo));

@@ -73,7 +73,7 @@
         android:fontFamily="@font/digi"
         android:paddingTop="2dp"
         android:paddingBottom="2dp"
-        android:text="0.001"
+        android:text="0"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="18sp"

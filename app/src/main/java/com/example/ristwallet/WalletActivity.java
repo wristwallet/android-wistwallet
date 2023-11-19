@@ -21,7 +21,7 @@ public class WalletActivity extends AppCompatActivity {
     public static final String INFURA_MAINNET = "https://mainnet.infura.io/v3/b30f49759769470c8acac821910d824f";
     private static final String TAG = "WalletActivity";
 //    static public String ADDRESS = "0xcCb4DD8873b48aC533dA83371Dd9ED4fa064C12b";
-    public String address = "0x7B595431639BdBCd3dD6F96AFE7BA32cfC800013";
+    public String address = "0xfA9c63784CB8045d5A4D5BfD28ca0761DA387144";
     public String endpoint = NetworkState.getNetwork().currentEndpoint;
 
     Web3j web3;
@@ -53,11 +53,11 @@ public class WalletActivity extends AppCompatActivity {
             // Make sure to run UI updates on the main thread
 
             float formatedBalance;
-            if(NetworkState.getNetwork().currentNetwork.equals("Ethereum")) {
-                formatedBalance = balance.floatValue() / 10000000000f;
-            } else {
+//            if(NetworkState.getNetwork().currentNetwork.equals("Ethereum")) {
+//                formatedBalance = balance.floatValue() / 10000000000f;
+//            } else {
                 formatedBalance = balance.floatValue() / 1000000000000000000f;
-            }
+//            }
             // format to just 4 digits after the decimal point
             formatedBalance = (float) (Math.round(formatedBalance * 10000.0) / 10000.0);
 
