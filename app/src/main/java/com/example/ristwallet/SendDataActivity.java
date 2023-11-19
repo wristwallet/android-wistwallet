@@ -2,11 +2,14 @@ package com.example.ristwallet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import org.web3j.ens.EnsResolver;
 import org.web3j.protocol.Web3j;
@@ -24,11 +27,13 @@ import java.math.BigInteger;
 public class SendDataActivity extends AppCompatActivity {
 
 //    private static final String PRIVATE_KEY = "9a340ac657f253bbfe0bed9c482c5bcff60b3eb8b4272fa5acb255828daa7cd0";
-    private static final String PRIVATE_KEY = "9a340ac657f253bbfe0bed9c482c5bcff60b3eb8b4272fa5acb255828daa7cd0";
+    private static final String PRIVATE_KEY = "b365e43013e336000b40f56dfddf9c80ba9dca12313ca4c547bea0be1fe50a08";
     private static final String TAG = "SendDataActivity";
 
     private EditText recieveAddressEditText;
     private EditText amountEditText;
+    private ProgressBar progressBar;
+    private ImageView sendButtonImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,8 @@ public class SendDataActivity extends AppCompatActivity {
 
         recieveAddressEditText = findViewById(R.id.recieveAddressEditText);
         amountEditText = findViewById(R.id.amountText);
+        progressBar = findViewById(R.id.progressBar);
+        sendButtonImage = findViewById(R.id.sendButtonImage);
     }
 
     public void sendFunds(View view) {
@@ -45,6 +52,8 @@ public class SendDataActivity extends AppCompatActivity {
         Credentials credentials = Credentials.create(PRIVATE_KEY);
         BigDecimal amountToSend = BigDecimal.valueOf(Double.parseDouble(amountEditText.getText().toString()));
 
+        progressBar.setVisibility(View.VISIBLE);
+        sendButtonImage.setVisibility(View.INVISIBLE);
         new SendFundsTask(recieveAddressEditText.getText().toString(), amountToSend, credentials, web3j, web3Mainnet).execute();
     }
 
@@ -94,6 +103,9 @@ public class SendDataActivity extends AppCompatActivity {
             if (transactionHash != null) {
                 Log.d(TAG, "sendFunds: " + transactionHash);
                 // Update the UI with the transaction hash or notify the user
+                Intent intent = new Intent(SendDataActivity.this, SendingStatusActivity.class);
+                intent.putExtra("transactionHash", transactionHash);
+                startActivity(intent);
             }
         }
         private String resolveEnsOrGetAddress(String recipient) throws Exception {

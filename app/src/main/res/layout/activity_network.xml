@@ -10,97 +10,257 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button4"
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textAlignment="center"
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick='changeToEthereum'
-            android:text="Ethereum"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="69dp" />
+            android:fontFamily="@font/mono_medium"
+            android:text="Network"
+            android:textColor="#fff" />
 
-        <Button
-            android:id="@+id/button5"
+        <!--        Ethureum -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick='changeToGnosis'
-            android:text="GnosisChain"
-            tools:layout_editor_absoluteX="50dp"
-            tools:layout_editor_absoluteY="124dp" />
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/ethereum" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:id="@+id/button4"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeToEthereum'
+                android:text="Ethereum"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button6"
+        <!--        Arbitrum -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="changeToArbitrum"
-            android:text="Arbitrum"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="69dp" />
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/arbitrum" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeToArbitrum'
+                android:text="Arbitrum"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button7"
+        <!--        Base -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="changeToPolygon"
-            android:text="Polygon"
-            tools:layout_editor_absoluteX="50dp"
-            tools:layout_editor_absoluteY="124dp" />
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/base" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeToBase'
+                android:text="Base"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button8"
+        <!--        Celo -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="changeToMantle"
-            android:text="Mantle"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="69dp" />
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/celo" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeToCelo'
+                android:text="Celo"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button9"
+        <!--        Gnosis Chain -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="changeTozkSync"
-            android:text="zkSync"
-            tools:layout_editor_absoluteX="50dp"
-            tools:layout_editor_absoluteY="124dp" />
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/gnosis" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeToGnosis'
+                android:text="Gnosis Chain"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button10"
+        <!--        Mantle -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="changeToStarknet"
-            android:text="Starknet"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="69dp" />
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/manal" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeToMantle'
+                android:text="Mantle"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button11"
+        <!--        Polygon -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="changeToScroll"
-            android:text="Scroll"
-            tools:layout_editor_absoluteX="50dp"
-            tools:layout_editor_absoluteY="124dp" />
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/polygon" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeToPolygon'
+                android:text="Polygon"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button12"
+        <!--        Scroll -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="changeToCelo"
-            android:text="Celo"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="69dp" />
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/scroll" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeToScroll'
+                android:text="Scroll"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button13"
+        <!--        Starknet -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="changeToBase"
-            android:text="Base"
-            tools:layout_editor_absoluteX="50dp"
-            tools:layout_editor_absoluteY="124dp" />
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/starknet" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeToStarknet'
+                android:text="Starknet"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
 
-
+        <!--        zkSync -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/zksync" />
+            <Button
+                android:fontFamily="@font/mono_regular"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="12sp"
+                android:onClick='changeTozkSync'
+                android:text="zkSync"
+                style="@style/Widget.AppCompat.Button.Borderless" />
+        </LinearLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </ScrollView>

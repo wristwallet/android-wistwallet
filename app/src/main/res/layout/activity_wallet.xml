@@ -24,8 +24,9 @@
     <ImageButton
         android:id="@+id/button"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="60dp"
-        android:layout_height="47dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
         android:onClick="goToSendActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,8 +35,9 @@
     <ImageButton
         android:id="@+id/button2"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="57dp"
-        android:layout_height="48dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="25dp"
         android:onClick="goToRecieveActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,26 +56,28 @@
         app:layout_constraintStart_toEndOf="@+id/balanceText" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/networkText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/mono_medium"
-        android:text="WristWallet"
-        android:textColor="#fff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="49dp"
-        android:layout_height="49dp"
         android:onClick="goToNetworkActivity"
-        app:icon="@drawable/network"
-        app:iconPadding="0dp"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="189dp" />
+        android:textColor="#fff"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.572"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Etherum" />
+
+    <ImageView
+        android:id="@+id/networkLogoImage"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/networkText"
+        app:layout_constraintEnd_toStartOf="@+id/networkText"
+        app:layout_constraintTop_toTopOf="@+id/networkText"
+        app:srcCompat="@drawable/ethereum" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
