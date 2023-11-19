@@ -30,7 +30,7 @@ git clone https://github.com/wristwallet/android-wistwallet.git
   
 4. Set Up an Emulator or Connect a Device
 
-* To set up an emulator, go to AVD Manager in Android Studio, create a virtual device, and start it.  To set up a virtual device that looks like a WristWallet as demonstrated in the video, use the files in the Android-skin repo as the custom skin. 
+* To set up an emulator, go to AVD Manager in Android Studio, create a virtual device, and start it.  To set up a virtual device that looks like a WristWallet as demonstrated in the video, use the files in the [Android-skin](https://github.com/wristwallet/Android-skin) repo as the custom skin. 
 * To use a physical device, connect it to your computer and enable USB debugging in the device's developer options.
 
 5. Run the Application
