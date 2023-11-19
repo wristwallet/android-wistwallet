@@ -26,8 +26,6 @@ import java.math.BigInteger;
 
 public class SendDataActivity extends AppCompatActivity {
 
-//    private static final String PRIVATE_KEY = "9a340ac657f253bbfe0bed9c482c5bcff60b3eb8b4272fa5acb255828daa7cd0";
-    private static final String PRIVATE_KEY = "b365e43013e336000b40f56dfddf9c80ba9dca12313ca4c547bea0be1fe50a08";
     private static final String TAG = "SendDataActivity";
 
     private EditText recieveAddressEditText;
